@@ -1,0 +1,137 @@
+%% This is based on the leaflet.tex file present in the texlive-leaflet module
+%% 
+%% Copyright 2014 Ankur Sinha for the Fedora Marketing Team - marketing@lists.fedoraproject.org
+% Please e-mail the marketing team if you have any questions with this document
+
+\def\filename{fedora-flyer-server.tex}
+\documentclass[
+notumble,
+%%nofoldmark,
+%%dvipdfm,
+%%portrait,
+%%titlepage,
+%%nocombine,
+%%a3paper,
+%%debug,
+%%nospecialtricks,
+%%draft,
+letterpaper,
+10pt
+]{leaflet}
+
+
+%\renewcommand*\foldmarkrule{.3mm}
+%\renewcommand*\foldmarklength{5mm}
+
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+% Use this to change the paper format
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[none]{hyphenat}
+
+%%\usepackage[default]{cantarell} %% Use option ``defaultsans'' to use cantarell as sans serif only
+%%\usepackage[default]{comfortaa} %% looks better
+%%\usepackage[T1]{fontenc}
+
+%% helvetica
+%\usepackage{helvet}
+%\renewcommand*{\familydefault}{\sfdefault}
+% opensans
+\usepackage[default,osfigures,scale=0.95]{opensans} %% Alternatively
+
+\usepackage[dvipsnames,usenames]{color}
+\definecolor{FedoraBlue}{cmyk}{1,0.46,0,0}
+\definecolor{ResolutionBlue}{cmyk}{0.573,.462,0,0.541}
+\definecolor{LIGHTGRAY}{gray}{.9}
+\usepackage[colorlinks=true,urlcolor=FedoraBlue]{hyperref}
+
+%%\setlength\footskip{2cm}
+
+\newcommand*\defaultmarker{\textsuperscript\textasteriskcentered}
+
+%%\title{Fedora workstation}
+\title{\includegraphics[keepaspectratio,width=0.8\textwidth]{Logo_fedoralogo.png}\vspace{1cm}\\\includegraphics[keepaspectratio,scale=0.5]{logo-color-server.png}\\\vspace{0.5cm}\LARGE{\textcolor{ResolutionBlue}{SERVER}}}
+\author{\LARGE{\textcolor{ResolutionBlue}{22}}}
+\date{\href{http://ask.fedoraproject.org}{http://ask.fedoraproject.org}}
+
+\CutLine*{1}% Dotted line without scissors
+%%\CutLine{6}%  Dotted line with scissors
+\CutLine*{6}%  Dotted line with scissors
+
+%% Use better logo for the workstation
+%%\AddToBackground{1}{%  Background of a small page
+%%  \put(20,530){\includegraphics{workstation-logo.png}}}
+
+%\AddToBackground{5}{%  Background of a small page
+%  \put(0,0){\textcolor{Cerulean}{\rule{\paperwidth}{\paperheight}}}}
+%%
+\AddToBackground*{2}{% Background of a large page
+  \put(\LenToUnit{.5\paperwidth},\LenToUnit{.5\paperheight}){%
+    \makebox(0,0)[c]{%
+      \resizebox{.9\paperwidth}{!}{\rotatebox{35.26}{%
+        \textsf{\textbf{\textcolor{LIGHTGRAY}{DRAFT}}}}}}}}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\vspace{5cm}
+\begin{center}\small{Fedora and the Infinity Logo are\\registered trademarks of Red Hat, Inc.}\end{center}
+
+\newpage
+
+
+\section{\textcolor{FedoraBlue}{Other improvements}}
+Of course, that's not all. Other applications have seen improvements too:
+\begin{itemize}
+  \item The user interface for \textbf{Boxes}, the application for virtual and remote machines, has a large number of improvements, including new preferences dialogs, a revamped box creation assistant, a feature to send keyboard shortcuts to a box, and display scaling by default.
+  \item Developers will appreciate the addition of software development environment software \textbf{Vagrant} into Fedora -- it'll work using our included virtualization technology, with no need to install third-party virtualization (like VirtualBox). Use this to work on top of the Cloud images mentioned above, or launch your own Vagrant boxes.
+  \item The \textbf{Image Viewer} has been redesigned to reduce the amount of window chrome and give more space to images. 
+  \item Faster and better dependency management with \textbf{DNF}.
+  \item \textbf{Elasticsearch} is full-featured and very popular self-standing open source indexing server, and now it's available by with just a ``yum install elasticsearch'' -- no, wait, make that ``dnf install elasticsearch''! 
+  \item Fedora 22 comes with \textbf{GNU Compiler Collection 5.1} as the primary compiler suite.
+  \item \ldots and much more
+\end{itemize}
+
+\section{\textcolor{FedoraBlue}{Exciting roadmap}}
+The community continues to work towards making Fedora a better \href{http://www.gnu.org/philosophy/free-sw.en.html}{free} operating system for our users.  So if you want to be part of the future of the Linux desktop, get on board now!
+
+Information on the complete roadmap can be found here:\\ \href{http://fedoraproject.org/wiki/Releases/22/ChangeSet}{http://fedoraproject.org/wiki/Releases/22/ChangeSet}
+
+\vspace{1.5cm}
+\begin{figure}[h]
+  \centering
+  \includegraphics[keepaspectratio]{Fedora-server-v5a-infinity.png}
+\end{figure}
+\newpage
+
+\begin{center}
+  {\color{FedoraBlue}
+  \LARGE{Fedora Project\vspace{1cm}}
+  \Large{\href{http://fedoraproject.org}{http://fedoraproject.org}}
+}
+\end{center}
+
+\section{\textcolor{FedoraBlue}{Getting Support}}
+\subsection{Fedora project wiki and mailing lists}
+\href{https://fedoraproject.org/wiki/Communicate}{https://fedoraproject.org/wiki/Communicate}
+
+\subsection{Official Documentation}
+\href{http://docs.fedoraproject.org}{http://docs.fedoraproject.org}
+
+\subsection{IRC Channel}
+\href{http://webchat.freenode.net/?channels=#fedora}{\#fedora @ irc.freenode.net}
+
+\subsection{Community forums}
+\href{http://ask.fedoraproject.org}{http://ask.fedoraproject.org}
+\href{http://fedoraforum.org}{http://fedoraforum.org}
+
+
+\section{\textcolor{FedoraBlue}{Looking to join the Fedora community?}}
+Are you interested in contributing to Fedora? There are many ways you can become active in the project.  Whether you are a People Person, Designer, OS Developer, Packager or Administrator - we have a place for you. Just head to the following page and get started today!
+
+\begin{center}\href{http://join.fedoraproject.org}{http://join.fedoraproject.org}\end{center}
+
+
+\end{document}
