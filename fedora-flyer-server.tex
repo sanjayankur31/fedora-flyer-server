@@ -81,29 +81,45 @@ letterpaper,
 
 \newpage
 
+\section{\textcolor{FedoraBlue}{Database server role}}
+The Fedora Server edition focuses on easy of different server roles. Fedora 21 debuted with an Domain Controller Role featuring FreeIPA. For this release, we've added a Database Server role, built around PostgreSQL. 
+
+\section{\textcolor{FedoraBlue}{Default to XFS filesystem}}
+The default file system type for Fedora Server installs will be XFS running atop LVM for all partitions except /boot. The /boot partition will remain a non-LVM, ext4 partition due to technological limitations of the bootloader. 
+
+\section{\textcolor{FedoraBlue}{Cockpit will be compatible between OS releases}}
+\begin{figure}[h]
+  \centering
+  \includegraphics[keepaspectratio,width=\textwidth]{screenshot-docker.png}
+\end{figure}
+Cockpit is a server manager that makes it easy to administer your GNU/Linux servers via a web browser:
+\begin{itemize}
+  \item \textbf{Easy to use}: Cockpit is perfect for new sysadmins, allowing them to easily perform simple tasks such as storage administration, inspecting journals and starting and stopping services. 
+  \item \textbf{No interference}: Jumping between the terminal and the web tool is no problem. A service started via Cockpit can be stopped via the terminal. Likewise, if an error occurs in the terminal, it can be seen in the Cockpit journal interface. 
+  \item \textbf{Multi-server}: You can monitor and administer several servers at the same time.
+\end{itemize}
+
+\section{\textcolor{FedoraBlue}{Docker containers on armv7hl architecture}}
+Users of the Fedora Server on armv7hl can now create and manage their own Docker containers!
+
 
 \section{\textcolor{FedoraBlue}{Other improvements}}
-Of course, that's not all. Other applications have seen improvements too:
 \begin{itemize}
-  \item The user interface for \textbf{Boxes}, the application for virtual and remote machines, has a large number of improvements, including new preferences dialogs, a revamped box creation assistant, a feature to send keyboard shortcuts to a box, and display scaling by default.
-  \item Developers will appreciate the addition of software development environment software \textbf{Vagrant} into Fedora -- it'll work using our included virtualization technology, with no need to install third-party virtualization (like VirtualBox). Use this to work on top of the Cloud images mentioned above, or launch your own Vagrant boxes.
-  \item The \textbf{Image Viewer} has been redesigned to reduce the amount of window chrome and give more space to images. 
   \item Faster and better dependency management with \textbf{DNF}.
-  \item \textbf{Elasticsearch} is full-featured and very popular self-standing open source indexing server, and now it's available by with just a ``yum install elasticsearch'' -- no, wait, make that ``dnf install elasticsearch''! 
-  \item Fedora 22 comes with \textbf{GNU Compiler Collection 5.1} as the primary compiler suite.
+  \item \textbf{Ipsilon}: Ipsilon is a server and a toolkit to configure Apache-based Service Providers. The server is a pluggable self-contained mod\_wsgi application that provides federated SSO to web applications. User authentication is always performed against a separate Identity Management system (for example a FreeIPA server), and communication with application is done using a federation protocol like SAML, OpenID, etc.. 
   \item \ldots and much more
 \end{itemize}
 
 \section{\textcolor{FedoraBlue}{Exciting roadmap}}
-The community continues to work towards making Fedora a better \href{http://www.gnu.org/philosophy/free-sw.en.html}{free} operating system for our users.  So if you want to be part of the future of the Linux desktop, get on board now!
+The community continues to work towards making Fedora a better \href{http://www.gnu.org/philosophy/free-sw.en.html}{free} operating system for our users.
 
 Information on the complete roadmap can be found here:\\ \href{http://fedoraproject.org/wiki/Releases/22/ChangeSet}{http://fedoraproject.org/wiki/Releases/22/ChangeSet}
 
-\vspace{1.5cm}
-\begin{figure}[h]
-  \centering
-  \includegraphics[keepaspectratio]{Fedora-server-v5a-infinity.png}
-\end{figure}
+%\vspace{1.5cm}
+%\begin{figure}[h]
+%  \centering
+%  \includegraphics[keepaspectratio]{Fedora-server-v5a-infinity.png}
+%\end{figure}
 \newpage
 
 \begin{center}
